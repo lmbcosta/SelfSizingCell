@@ -33,7 +33,37 @@ let package = Package(
 ```bash
 $ swift build
 ```
-Alternatevely, in your Xcode: Go to File > Swift Packages > Add Pachage Dependency
+Alternatively, in your Xcode: Go to File > Swift Packages > Add Pachage Dependency
+
+### Usage
+This Package supports both configurations: Xib's and Code.<br/>
+In both cases you need to extend `SelfSizingCollectionViewCell` for your `UICollectionViewCell` and `BaseCollectionView` for you `UICollectionView`.<br/>
+
+```swift
+class MyCollectionView: BaseCollectionView { ... }
+
+class MyCollectionViewCell: SelfSizingCollectionViewCell { ... }
+```
+
+On your `UICollectionViewDataSource` add cell max width
+```swift
+class MyViewController: UIViewController, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
+        
+        cell.maxWidth = collectionView.bounds.width
+        
+        return cell
+    }
+}
+```
+
+* #### Xib
+Your constraints in your `UICollectionViewCell` must be well applied. If you have conficts between constraints this will not work.</br>
+
+* #### Code
+
 
 ## Author
 Luís Costa - lmbcosta@hotmail.com<br/>
