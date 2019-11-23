@@ -10,14 +10,14 @@
 
 import UIKit
 
-class BaseCollectionView: UICollectionView {
+open class BaseCollectionView: UICollectionView {
     // MARK: - Properties
     @IBOutlet open weak var layout: UICollectionViewFlowLayout! {
         didSet { layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize }
     }
     
     // MARK: Initializers
-    override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+    public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         
         if let collectionViewFlowLayout = layout as? UICollectionViewFlowLayout {
@@ -25,7 +25,7 @@ class BaseCollectionView: UICollectionView {
         }
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
 }
