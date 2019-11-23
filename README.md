@@ -61,24 +61,25 @@ class MyViewController: UIViewController, UICollectionViewDataSource {
 ```
 
 * #### Xib
-Your constraints in your `UICollectionViewCell` must be well applied. If you have conficts between constraints this will not work.</br>
+    Your constraints in your `UICollectionViewCell` must be well applied. If you have conficts between constraints this will not work.</br>
 
-** On your `UICollectionView.xib` connect your `UICollectionViewFlowLayout` into 
-```
-class BaseCollectionView: UICollectionView {
-    @IBOutlet open weak var layout: UICollectionViewFlowLayout!
-}
-```
+    1. On your `UICollectionView.xib` connect your `UICollectionViewFlowLayout` into 
 
-** On your  `UICollectionViewCell.xib` create a width constraint for your view and connect it into 
-```
-open class SelfSizingCollectionViewCell: UICollectionViewCell {
-    @IBOutlet open weak var widthConstraint: NSLayoutConstraint!
-}
-```
+        ```
+        class BaseCollectionView: UICollectionView {
+        @IBOutlet open weak var layout: UICollectionViewFlowLayout!
+        }
+        ```
 
+    2. On your  `UICollectionViewCell.xib` create a width constraint for your view and connect it into 
+
+        ```
+        open class SelfSizingCollectionViewCell: UICollectionViewCell {
+        @IBOutlet open weak var widthConstraint: NSLayoutConstraint!
+        }
+        ```
 * #### Code
-You dont need to do anything. SelfSizingCell handles it for you😎
+    You dont need to do anything. SelfSizingCell handles it for you😎
 
 ## Author
 Luís Costa - lmbcosta@hotmail.com<br/>
