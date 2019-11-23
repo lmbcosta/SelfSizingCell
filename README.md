@@ -1,4 +1,4 @@
-# SelfSizingCell
+# SelfSizingCell📐▪️🔳
 
 Enables collection view cells, dynamically, adjust their size based on their content
 
@@ -45,7 +45,8 @@ class MyCollectionView: BaseCollectionView { ... }
 class MyCollectionViewCell: SelfSizingCollectionViewCell { ... }
 ```
 
-On your `UICollectionViewDataSource` add cell max width
+On your `UICollectionViewDataSource` set cell's max width
+
 ```swift
 class MyViewController: UIViewController, UICollectionViewDataSource {
     
