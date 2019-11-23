@@ -67,7 +67,7 @@ class MyViewController: UIViewController, UICollectionViewDataSource {
 
         ```
         class BaseCollectionView: UICollectionView {
-        @IBOutlet open weak var layout: UICollectionViewFlowLayout!
+          @IBOutlet open weak var layout: UICollectionViewFlowLayout!
         }
         ```
 
@@ -75,7 +75,7 @@ class MyViewController: UIViewController, UICollectionViewDataSource {
 
         ```
         open class SelfSizingCollectionViewCell: UICollectionViewCell {
-        @IBOutlet open weak var widthConstraint: NSLayoutConstraint!
+          @IBOutlet open weak var widthConstraint: NSLayoutConstraint!
         }
         ```
 * #### Code
