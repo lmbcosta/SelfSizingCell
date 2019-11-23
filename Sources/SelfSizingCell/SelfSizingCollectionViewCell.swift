@@ -41,7 +41,7 @@ open class SelfSizingCollectionViewCell: UICollectionViewCell {
         hasXib = false
         super.init(frame: frame)
         setupContentViewConstraints()
-        setupWidthConstraint()()
+        setupWidthConstraint()
     }
     
     public required init?(coder: NSCoder) {
