@@ -1,6 +1,6 @@
 # SelfSizingCell ▪️ 📐 🔳
 
-Enables collection view cells, dynamically, adjust their size based on their content
+Enables collection view cells adjusting dynamically their size based on their content
 
 ## Requirements
 * Xcode 11
@@ -59,6 +59,7 @@ class MyViewController: UIViewController, UICollectionViewDataSource {
     }
 }
 ```
+Just remember, you have to think about your Auto Layout knowing that cell's view width will be constrained to `var maxWidth` value.
 
 * #### Xib
     Your constraints in your `UICollectionViewCell` must be well applied. If you have conficts between constraints this will not work.</br>
